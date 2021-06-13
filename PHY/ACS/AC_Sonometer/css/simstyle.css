@@ -1,0 +1,270 @@
+@font-face {
+	font-family: MRKGPEN;
+	src: url(MRKGPEN.TTF);
+}
+.userSelect {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.main {
+	overflow: hidden;
+}
+.varResult {
+	padding: 5px 0px 10px 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: 600;
+	color: #000;
+	text-align: left;
+}
+.posAbso {
+	position: absolute;
+}
+#popupMsg {
+	position: absolute;
+	left: 7px;
+	top: 18px;
+	font-size: 1.7em;
+	font-family: MRKGPEN;
+	width: 114px;
+	text-align: center;
+}
+#rightVal {
+	padding-left: 0px;
+}
+#sliderspan,
+#sliderspan1,
+#bridgeA_ctrl_val,
+#bridgeB_ctrl_val,
+#magnet_pos_val {
+	padding-left: 0px;
+}
+#rightmaxvals2 {
+	padding-left: 119px;
+}
+#rightmaxvals {
+	padding-left: 126px;
+}
+#rightmaxvals1 {
+	padding-left: 112px;
+}
+#bridgeA_lbl_max {
+	padding-left: 129px;
+}
+#bridgeB_lbl_max {
+	padding-left: 129px;
+}
+#magnet_lbl_max {
+	padding-left: 129px;
+}
+#bg {
+	left: 0;
+	top: 0;
+}
+#light_on {
+	left: 34px;
+	top: 114px;
+	display: none;
+}
+#wire_twist_left {
+	position: absolute;
+	left: 66.5px;
+	top: 180px;
+}
+#wire_twist_right {
+	position: absolute;
+	left: 520.5px;
+	top: 180px;
+}
+#bridgeA {
+	position: absolute;
+	left: 96px;
+	top: 183px;
+}
+#bridge_A_txt {
+	position: absolute;
+	left: 75px;
+	top: 204px;
+	color: #edece7;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: 500;
+}
+#bridge_B_txt {
+	position: absolute;
+	left: 455px;
+	top: 204px;
+	color: #edece7;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: 500;
+}
+#bridgeB {
+	position: absolute;
+	left: 467px;
+	top: 183px;
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipV;
+	-ms-filter: "FlipV";
+}
+#paperSmall {
+	position: absolute;
+	left: 287.5px;
+	top: 181px;
+}
+#magnet {
+	position: absolute;
+	left: 275.5px;
+	top: 169px;
+}
+#wire {
+	position: absolute;
+	left: 60px;
+	top: 182px;
+	width: 485px;
+	height: .5px;
+	background-color: #ee6647;
+}
+#wireInWeight {
+	position: absolute;
+	left: 548px;
+	top: 193px;
+	width: 1px;
+	height: 65px;
+	background-color: #ce6f59;
+}
+#hangWeight {
+	position: absolute;
+	left: 541px;
+	top: 256px;
+}
+.weight {
+	position: absolute;
+	left: 541px;
+	display: none;
+}
+#weight_10 {
+	top: 281px;
+}
+#weight_15 {
+	top: 284px;
+}
+#weight_20 {
+	top: 287px;
+}
+#weight_25 {
+	top: 290px;
+}
+#weight_30 {
+	top: 293px;
+}
+#weight_35 {
+	top: 296px;
+}
+#weight_40 {
+	top: 299px;
+}
+#weight_45 {
+	top: 302px;
+}
+#weight_50 {
+	top: 305px;
+}
+#roundZoom {
+	position: absolute;
+	left: 316px;
+	top: 10px;
+}
+#bridgeAzoom {
+	position: absolute;
+	left: 41px;
+	top: 244px;
+	width: 214px;
+	height: 84px;
+	border: solid 3px #ffffff;
+	border-radius: 6px;
+	overflow: hidden;
+	background-color: #be892a;
+}
+#bridgeBzoom {
+	position: absolute;
+	left: 277px;
+	top: 244px;
+	width: 214px;
+	height: 84px;
+	border: solid 3px #ffffff;
+	border-radius: 6px;
+	overflow: hidden;
+	background-color: #be892a;
+}
+#scaleA {
+	position: absolute;
+	left: -39px;
+	top: -40px;
+}
+#scaleB {
+	position: absolute;
+	left: -3839px;
+	top: -40px;
+}
+#zoomBridgeA {
+	position: absolute;
+	left: 1px;
+	top: 64px;
+}
+#zoomBridgeB {
+	position: absolute;
+	left: 200px;
+	top: 64px;
+}
+#zoomView {
+	position: absolute;
+	left: 342px;
+	top: 10px;
+	width: 153px;
+	height: 149px;
+	border: solid 3px #796b4a;
+	border-radius: 78px;
+	overflow: hidden;
+}
+#zoomWire {
+	position: absolute;
+	left: 0px;
+	top: 75px;
+	width: 154px;
+	height: 2px;
+	background-color: #ce6f59;
+}
+#zoomCanvas {
+	position: absolute;
+	left: -5px;
+	top: -1px;
+}
+#sonometerPortion {
+	position: absolute;
+	left: 512px;
+	top: 181px;
+}
+#popup {
+	position: absolute;
+	left: 280px;
+	top: 87px;
+	display: none;
+}
+#knob {
+	position: absolute;
+	left: 68px;
+	top: 116px;
+}
+#switch {
+	position: absolute;
+	left: 68px;
+	top: 116px;
+	display: none;
+}
