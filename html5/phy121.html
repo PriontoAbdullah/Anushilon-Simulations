@@ -1,51 +1,77 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <!-- Enable IE9 Standards mode -->
-    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title></title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="all" href="template/olab/css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="template/olab/css/grid.css" />
-    <link href="template/olab/css/mainstyle.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="template/olab/css/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="template/olab/css/grid.css"
+    />
+    <link
+      href="template/olab/css/mainstyle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="js/jquery-latest.js"></script>
     <!--[if IE]><script src="js/excanvas.js"></script><![endif]-->
-    <link href="../PHY/EMM/MeterBridge-Single-And-Series/css/simstyle.css" rel="stylesheet" type="text/css" />
-    <script language="javascript" type="text/javascript" src="./js/jquery.i18n.js"></script>
+    <link
+      href="../PHY/EMM/MeterBridge-Single-And-Series/css/simstyle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="./js/jquery.i18n.js"
+    ></script>
     <script language="javascript">
-        var language_script = 'en-IN';
-        var language = language_script.toString();
-        language = language.slice(0, 2);
-        var gt = $;
-        gt.gettext.setLocale(language);
+      var language_script = "en-IN";
+      var language = language_script.toString();
+      language = language.slice(0, 2);
+      var gt = $;
+      gt.gettext.setLocale(language);
     </script>
-    <script type='text/javascript' src='../PHY/EMM/MeterBridge-Single-And-Series/./locale/en-IN/language.json'></script>
-
-
-
-
+    <script
+      type="text/javascript"
+      src="../PHY/EMM/MeterBridge-Single-And-Series/./locale/en-IN/language.json"
+    ></script>
 
     <!--[if gte IE 9]>
-  <style type="text/css">
-    .gradient {
-       filter: none;
-    }
-  </style>
-<![endif]-->
+      <style type="text/css">
+        .gradient {
+          filter: none;
+        }
+      </style>
+    <![endif]-->
     <script src="js/js-webshim/1.9.7/minified/extras/modernizr-custom.js"></script>
     <script>
-        if (!Modernizr.inputtypes.range) {
-            document.write("<script type=\"text/javascript\" src=\"js/js-webshim/1.9.7/minified/polyfiller.js\"></" + "script>");
-            $(document).ready(function () {
-                $.webshims.setOptions("waitReady", false);
-                $.webshims.polyfill('forms-ext');
-            });
-        };
-// Set up the yepnope (Modernizr.load) directives...
-        /*Modernizr.load([
+      if (!Modernizr.inputtypes.range) {
+        document.write(
+          '<script type="text/javascript" src="js/js-webshim/1.9.7/minified/polyfiller.js"></' +
+            "script>"
+        );
+        $(document).ready(function () {
+          $.webshims.setOptions("waitReady", false);
+          $.webshims.polyfill("forms-ext");
+        });
+      }
+      // Set up the yepnope (Modernizr.load) directives...
+      /*Modernizr.load([
         {
         
             // Test if Input Range is supported using Modernizr
@@ -66,203 +92,470 @@
             }
         }
         ]);*/
-
     </script>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="main">
-        <header id="silumatorTemp">
-            <div class="g99 logo">
-            </div>
-            <!-- end .g99 -->
-            <div class="g495 mainTitle">
-                <p id="expName"></p>
-            </div>
-            <!-- end .g495 -->
-            <div class="g198 menuSet">
-
-            </div>
-            <!-- end .g198 -->
-            <!-- <div class="g792 bannerFoot">
+      <header id="silumatorTemp">
+        <div class="g99 logo"></div>
+        <!-- end .g99 -->
+        <div class="g495 mainTitle">
+          <p id="expName"></p>
+        </div>
+        <!-- end .g495 -->
+        <div class="g198 menuSet"></div>
+        <!-- end .g198 -->
+        <!-- <div class="g792 bannerFoot">
                 <ul id="olabmenuBar">
                     <li><a href="#">SAVE</a></li>
                     <li><a href="#">FULLSCREEN</a></li>
                     <li><a href="#">EXIT</a></li>
                 </ul>
             </div> -->
-            <!-- end .grid_8 -->
-        </header><!-- /header -->
-        <div class="g594 canvasHolder">
-            <div id="canvasBox">
-                <script type="text/javascript" language="javascript">
-                    var simPath = "../PHY/EMM/MeterBridge-Single-And-Series/";
-                </script>
-                <canvas id="mainCanvas"></canvas>
-                <canvas id="mBridge"></canvas>
-                <canvas id="galvanometer"></canvas>
-                <canvas id="zoomBG" style="border:#CCC solid;"></canvas>
-                <canvas id="zoomgalvanometer"></canvas>
-                <canvas id="scale" style="border:#CCC solid;"></canvas>
-                <canvas id="line1"></canvas>
-                <canvas id="line2"></canvas>
-                <canvas id="jockey"></canvas>
-                <canvas id="smalljockey"></canvas>
-                <canvas id="wireGal"></canvas>
-                <canvas id="wireJockey"></canvas>
-                <canvas id="wireJockey2"></canvas>
-                <canvas id="battery"></canvas>
-                <canvas id="resistor" name="resistor"></canvas>
-                <canvas id="rshadow"></canvas>
-                <canvas id="bshadow"></canvas>
-                <canvas id="gshadow"></canvas>
-                <canvas id="wireBattery"></canvas>
-                <canvas id="wireRes"></canvas>
-                <img id="connector" src="../PHY/EMM/MeterBridge-Single-And-Series/images/connector2.png" />
-                <img id="connector2" src="../PHY/EMM/MeterBridge-Single-And-Series/images/connector.png" />
-                <div id="needleRotate1"><img id="needleRotate3Img"
-                        src="../PHY/EMM/MeterBridge-Single-And-Series/images/needle.png" /></div>
-                <div id="needleRotate2"><img id="needleRotate4Img"
-                        src="../PHY/EMM/MeterBridge-Single-And-Series/images/smallneedle.png" /></div>
-                <div id="firstneedleRotate1"><img id="firstneedleRotate3Img"
-                        src="../PHY/EMM/MeterBridge-Single-And-Series/images/firstneedle.png" /></div>
-                <div id="firstneedleRotate2"><img id="firstneedleRotate4Img"
-                        src="../PHY/EMM/MeterBridge-Single-And-Series/images/firstsmallneedle.png" /></div>
-                <div id="needleRotate3"><img id="needleRotate5Img"
-                        src="../PHY/EMM/MeterBridge-Single-And-Series/images/needlerotate3.png" /></div>
-                <div id="needleRotate4"><img id="needleRotate6Img"
-                        src="../PHY/EMM/MeterBridge-Single-And-Series/images/needlerotate4.png" /></div>
-                <div id="tooltip"
-                    style="background:url(../PHY/EMM/MeterBridge-Single-And-Series/images/tooltipImg.png) top left no-repeat;">
-                </div>
-                <div id="tooltip1"
-                    style="background:url(../PHY/EMM/MeterBridge-Single-And-Series/images/tooltip1.png) top left no-repeat;">
-                </div>
-                <div id="tooltip2"
-                    style="background:url(../PHY/EMM/MeterBridge-Single-And-Series/images/tooltipImg.png) top left no-repeat;">
-                </div>
-                <div id="box"><img id="box1Img" src="../PHY/EMM/MeterBridge-Single-And-Series/images/box.png" /> </div>
-                <div id="close" onclick="closeBox()"><img id="closeImg"
-                        src="../PHY/EMM/MeterBridge-Single-And-Series/images/close.png" /> </div>
-                <div id="scaleImg"><img id="scalezoom"
-                        src="../PHY/EMM/MeterBridge-Single-And-Series/images/scale.png" /></div>
-                <div id="wireJockey2"><img id="wireJockeyImg2"
-                        src="../PHY/EMM/MeterBridge-Single-And-Series/images/wJockey1.png" /></div>
-                <div id="wire"><img id="wireImg" src="../PHY/EMM/MeterBridge-Single-And-Series/images/wire.png" /></div>
+        <!-- end .grid_8 -->
+      </header>
+      <!-- /header -->
+      <div class="g594 canvasHolder">
+        <div id="canvasBox">
+          <script type="text/javascript" language="javascript">
+            var simPath = "../PHY/EMM/MeterBridge-Single-And-Series/";
+          </script>
+          <canvas id="mainCanvas"></canvas>
+          <canvas id="mBridge"></canvas>
+          <canvas id="galvanometer"></canvas>
+          <canvas id="zoomBG" style="border: #ccc solid"></canvas>
+          <canvas id="zoomgalvanometer"></canvas>
+          <canvas id="scale" style="border: #ccc solid"></canvas>
+          <canvas id="line1"></canvas>
+          <canvas id="line2"></canvas>
+          <canvas id="jockey"></canvas>
+          <canvas id="smalljockey"></canvas>
+          <canvas id="wireGal"></canvas>
+          <canvas id="wireJockey"></canvas>
+          <canvas id="wireJockey2"></canvas>
+          <canvas id="battery"></canvas>
+          <canvas id="resistor" name="resistor"></canvas>
+          <canvas id="rshadow"></canvas>
+          <canvas id="bshadow"></canvas>
+          <canvas id="gshadow"></canvas>
+          <canvas id="wireBattery"></canvas>
+          <canvas id="wireRes"></canvas>
+          <img
+            id="connector"
+            src="../PHY/EMM/MeterBridge-Single-And-Series/images/connector2.png"
+          />
+          <img
+            id="connector2"
+            src="../PHY/EMM/MeterBridge-Single-And-Series/images/connector.png"
+          />
+          <div id="needleRotate1">
+            <img
+              id="needleRotate3Img"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/needle.png"
+            />
+          </div>
+          <div id="needleRotate2">
+            <img
+              id="needleRotate4Img"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/smallneedle.png"
+            />
+          </div>
+          <div id="firstneedleRotate1">
+            <img
+              id="firstneedleRotate3Img"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/firstneedle.png"
+            />
+          </div>
+          <div id="firstneedleRotate2">
+            <img
+              id="firstneedleRotate4Img"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/firstsmallneedle.png"
+            />
+          </div>
+          <div id="needleRotate3">
+            <img
+              id="needleRotate5Img"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/needlerotate3.png"
+            />
+          </div>
+          <div id="needleRotate4">
+            <img
+              id="needleRotate6Img"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/needlerotate4.png"
+            />
+          </div>
+          <div
+            id="tooltip"
+            style="
+              background: url(../PHY/EMM/MeterBridge-Single-And-Series/images/tooltipImg.png)
+                top left no-repeat;
+            "
+          ></div>
+          <div
+            id="tooltip1"
+            style="
+              background: url(../PHY/EMM/MeterBridge-Single-And-Series/images/tooltip1.png)
+                top left no-repeat;
+            "
+          ></div>
+          <div
+            id="tooltip2"
+            style="
+              background: url(../PHY/EMM/MeterBridge-Single-And-Series/images/tooltipImg.png)
+                top left no-repeat;
+            "
+          ></div>
+          <div id="box">
+            <img
+              id="box1Img"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/box.png"
+            />
+          </div>
+          <div id="close" onclick="closeBox()">
+            <img
+              id="closeImg"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/close.png"
+            />
+          </div>
+          <div id="scaleImg">
+            <img
+              id="scalezoom"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/scale.png"
+            />
+          </div>
+          <div id="wireJockey2">
+            <img
+              id="wireJockeyImg2"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/wJockey1.png"
+            />
+          </div>
+          <div id="wire">
+            <img
+              id="wireImg"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/wire.png"
+            />
+          </div>
 
-                <div id="wireSeries1"><img id="wireSeriesImg1"
-                        src="../PHY/EMM/MeterBridge-Single-And-Series/images/wireSeries1.png" /></div>
-                <div id="wireSeries2"><img id="wireSeriesImg2"
-                        src="../PHY/EMM/MeterBridge-Single-And-Series/images/wireseries2.png" /></div>
-                <div id="wireOnStage" onmouseover="changeCursor()" onmouseout="defaultCursor()"><img id="wireImg3"
-                        src="../PHY/EMM/MeterBridge-Single-And-Series/images/parallelWire.png" /></div>
-                <div id="round1"><img id="roundImg1" src="../PHY/EMM/MeterBridge-Single-And-Series/images/round1.png" />
-                </div>
-                <div id="round2"><img id="roundImg2" src="../PHY/EMM/MeterBridge-Single-And-Series/images/round2.png" />
-                </div>
-                <div id="resValue">
-                    <p id="ResBoxLbl">Select Resistance</p>
-                    <form name="listForm">
-                        <p>&nbsp;&nbsp;<input type="radio" checked="choice"><span id="small">Small</span></p>
-                        <p>&nbsp;&nbsp;</p>
-                        <p><input type="checkbox" name="choice" onchange="checkTotal()" value="1"
-                                checked="checked"><span>1</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="checkbox" name="choice" onchange="checkTotal()" value="2"
-                                checked="checked"><span>2</span>
-                        </p>
-                        <p><input type="checkbox" name="choice" onchange="checkTotal()" value="2" checked="checked">
-                            <span>2</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="checkbox" name="choice" onchange="checkTotal()" value="5"
-                                checked="checked"><span>5</span>
-                        </p>
+          <div id="wireSeries1">
+            <img
+              id="wireSeriesImg1"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/wireSeries1.png"
+            />
+          </div>
+          <div id="wireSeries2">
+            <img
+              id="wireSeriesImg2"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/wireseries2.png"
+            />
+          </div>
+          <div
+            id="wireOnStage"
+            onmouseover="changeCursor()"
+            onmouseout="defaultCursor()"
+          >
+            <img
+              id="wireImg3"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/parallelWire.png"
+            />
+          </div>
+          <div id="round1">
+            <img
+              id="roundImg1"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/round1.png"
+            />
+          </div>
+          <div id="round2">
+            <img
+              id="roundImg2"
+              src="../PHY/EMM/MeterBridge-Single-And-Series/images/round2.png"
+            />
+          </div>
+          <div id="resValue">
+            <p id="ResBoxLbl">Select Resistance</p>
+            <form name="listForm">
+              <p>
+                &nbsp;&nbsp;<input type="radio" checked="choice" /><span
+                  id="small"
+                  >Small</span
+                >
+              </p>
+              <p>&nbsp;&nbsp;</p>
+              <p>
+                <input
+                  type="checkbox"
+                  name="choice"
+                  onchange="checkTotal()"
+                  value="1"
+                  checked="checked"
+                /><span>1</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input
+                  type="checkbox"
+                  name="choice"
+                  onchange="checkTotal()"
+                  value="2"
+                  checked="checked"
+                /><span>2</span>
+              </p>
+              <p>
+                <input
+                  type="checkbox"
+                  name="choice"
+                  onchange="checkTotal()"
+                  value="2"
+                  checked="checked"
+                />
+                <span>2</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input
+                  type="checkbox"
+                  name="choice"
+                  onchange="checkTotal()"
+                  value="5"
+                  checked="checked"
+                /><span>5</span>
+              </p>
 
-                        <p><input type="checkbox" name="choice" onchange="checkTotal()" value="50" checked="checked">
-                            <span>50</span> &nbsp;&nbsp;&nbsp;
-                            <input type="checkbox" name="choice" onchange="checkTotal()" value="20"
-                                checked="checked"><span>20</span>
-                        </p>
+              <p>
+                <input
+                  type="checkbox"
+                  name="choice"
+                  onchange="checkTotal()"
+                  value="50"
+                  checked="checked"
+                />
+                <span>50</span> &nbsp;&nbsp;&nbsp;
+                <input
+                  type="checkbox"
+                  name="choice"
+                  onchange="checkTotal()"
+                  value="20"
+                  checked="checked"
+                /><span>20</span>
+              </p>
 
-                        <p><input type="checkbox" name="choice" onchange="checkTotal()" value="20" checked="checked">
-                            <span>20</span> &nbsp;&nbsp;&nbsp;
-                            <input type="checkbox" value="10" name="choice" onchange="checkTotal()"
-                                checked="checked"><span>10</span>
-                        </p>
+              <p>
+                <input
+                  type="checkbox"
+                  name="choice"
+                  onchange="checkTotal()"
+                  value="20"
+                  checked="checked"
+                />
+                <span>20</span> &nbsp;&nbsp;&nbsp;
+                <input
+                  type="checkbox"
+                  value="10"
+                  name="choice"
+                  onchange="checkTotal()"
+                  checked="checked"
+                /><span>10</span>
+              </p>
+            </form>
+          </div>
 
-                    </form>
-                </div>
-
-                <script type="text/javascript"
-                    src="../PHY/EMM/MeterBridge-Single-And-Series/js/simcontrols.js"></script>
-
-            </div>
+          <script
+            type="text/javascript"
+            src="../PHY/EMM/MeterBridge-Single-And-Series/js/simcontrols.js"
+          ></script>
         </div>
-        <div class="g198 controlHolder">
+      </div>
+      <div class="g198 controlHolder">
+        <ul>
+          <li>
+            <div class="varBox">
+              <div id="resistors_dropdown">
+                <p class="varTitle" id="resistorLbl">রোধক ব্যবস্থা:</p>
+                <select
+                  class="dropBox"
+                  name="resistors"
+                  id="resistors"
+                  onChange="resistorsCombo(this, 'resistors')"
+                ></select>
 
-            <ul>
-                <li>
-                    <div class="varBox">
+                <br /><br />
+              </div>
 
-                        <div id="resistors_dropdown">
-                            <p class="varTitle" id="resistorLbl">রোধক ব্যবস্থা:</p>
-                            <select class="dropBox" name="resistors" id="resistors"
-                                onChange="resistorsCombo(this, 'resistors')">
-                            </select>
-
-
-                            <br><br>
-                        </div>
-
-                        <div id="materials1" style="position:relative">
-                            <div id="resistor_control" name="resimg"
-                                style="position:absolute;width:40px;height:50px;left:30px;top:10px;"
-                                onmouseover="changeCursor()" onmouseout="defaultCursor()" onclick="showResistor(this)">
-                                <img id="drag1" style="position:absolute;"
-                                    src="../PHY/EMM/MeterBridge-Single-And-Series/images/smallresistor.png" /> </div>
-                            <div id="battery_control" name="batimg"
-                                style="position:absolute;width:40px;height:50px;left:120px;top:10px;"
-                                onmouseover="changeCursor()" onmouseout="defaultCursor()" onclick="showBattery(this)">
-                                <img id="drag2" src="../PHY/EMM/MeterBridge-Single-And-Series/images/smallBattery.png"
-                                    style="position:absolute;" /> </div>
-                            <div id="res" name="res"
-                                style="position:absolute;width:40px;height:50px;left:30px;top:10px;visibility:hidden;"
-                                onmouseover="changeCursor()" onmouseout="defaultCursor()"><img
-                                    src="../PHY/EMM/MeterBridge-Single-And-Series/images/res.png" /> </div>
-                            <div id="bat" name="bat"
-                                style="position:absolute;width:40px;height:50px;left:120px;top:10px;visibility:hidden;"
-                                onmouseover="changeCursor()" onmouseout="defaultCursor()"><img
-                                    src="../PHY/EMM/MeterBridge-Single-And-Series/images/bat.png" /> </div>
-                        </div>
-                        <div id="materials2" style="position:relative">
-                            <div id="parallelWire1" style="position:absolute;width:40px;height:50px;left:30px;top:80px;"
-                                onmouseover="changeCursor()" onmouseout="defaultCursor()"
-                                onclick="showParellelWire(this)"><img id="drag3"
-                                    src="../PHY/EMM/MeterBridge-Single-And-Series/images/parallelWire.png"
-                                    style="position:absolute;" /> </div>
-                            <div id="parallelWire2"
-                                style="position:absolute;width:40px;height:50px;left:120px;top:80px;"
-                                onmouseover="changeCursor()" onmouseout="defaultCursor()"
-                                onclick="showParellelWire(this)"><img id="drag4"
-                                    src="../PHY/EMM/MeterBridge-Single-And-Series/images/parallelWire.png"
-                                    style="position:absolute;" /> </div>
-                            <div id="parallel1"
-                                style="position:absolute;width:40px;height:50px;left:30px;top:80px;visibility:hidden;"
-                                onmouseover="changeCursor()" onmouseout="defaultCursor()"><img
-                                    src="../PHY/EMM/MeterBridge-Single-And-Series/images/parallel.png" /> </div>
-                            <div id="parallel2"
-                                style="position:absolute;width:40px;height:50px;left:120px;top:80px;visibility:hidden;"
-                                onmouseover="changeCursor()" onmouseout="defaultCursor()"><img
-                                    src="../PHY/EMM/MeterBridge-Single-And-Series/images/parallel.png" /> </div>
-                        </div>
-                        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                        <p align="center"><input type="button" class="subButton" id="exp" name="exp"
-                                value="পরীক্ষণ শুরু করুন" disabled="disabled" onclick="startExp()" /></p><br /><br />
-                        <p align="center"><input type="button" class="subButton" id="key" name="key" value="চাবি ঢোকান"
-                                disabled="disabled" onclick="keyFn()" /></p><br /><br />
-                        <p class="varTitle" id="input1"></p>
-                        <!--  <span id="input1">0.01</span>
+              <div id="materials1" style="position: relative">
+                <div
+                  id="resistor_control"
+                  name="resimg"
+                  style="
+                    position: absolute;
+                    width: 40px;
+                    height: 50px;
+                    left: 30px;
+                    top: 10px;
+                  "
+                  onmouseover="changeCursor()"
+                  onmouseout="defaultCursor()"
+                  onclick="showResistor(this)"
+                >
+                  <img
+                    id="drag1"
+                    style="position: absolute"
+                    src="../PHY/EMM/MeterBridge-Single-And-Series/images/smallresistor.png"
+                  />
+                </div>
+                <div
+                  id="battery_control"
+                  name="batimg"
+                  style="
+                    position: absolute;
+                    width: 40px;
+                    height: 50px;
+                    left: 120px;
+                    top: 10px;
+                  "
+                  onmouseover="changeCursor()"
+                  onmouseout="defaultCursor()"
+                  onclick="showBattery(this)"
+                >
+                  <img
+                    id="drag2"
+                    src="../PHY/EMM/MeterBridge-Single-And-Series/images/smallBattery.png"
+                    style="position: absolute"
+                  />
+                </div>
+                <div
+                  id="res"
+                  name="res"
+                  style="
+                    position: absolute;
+                    width: 40px;
+                    height: 50px;
+                    left: 30px;
+                    top: 10px;
+                    visibility: hidden;
+                  "
+                  onmouseover="changeCursor()"
+                  onmouseout="defaultCursor()"
+                >
+                  <img
+                    src="../PHY/EMM/MeterBridge-Single-And-Series/images/res.png"
+                  />
+                </div>
+                <div
+                  id="bat"
+                  name="bat"
+                  style="
+                    position: absolute;
+                    width: 40px;
+                    height: 50px;
+                    left: 120px;
+                    top: 10px;
+                    visibility: hidden;
+                  "
+                  onmouseover="changeCursor()"
+                  onmouseout="defaultCursor()"
+                >
+                  <img
+                    src="../PHY/EMM/MeterBridge-Single-And-Series/images/bat.png"
+                  />
+                </div>
+              </div>
+              <div id="materials2" style="position: relative">
+                <div
+                  id="parallelWire1"
+                  style="
+                    position: absolute;
+                    width: 40px;
+                    height: 50px;
+                    left: 30px;
+                    top: 80px;
+                  "
+                  onmouseover="changeCursor()"
+                  onmouseout="defaultCursor()"
+                  onclick="showParellelWire(this)"
+                >
+                  <img
+                    id="drag3"
+                    src="../PHY/EMM/MeterBridge-Single-And-Series/images/parallelWire.png"
+                    style="position: absolute"
+                  />
+                </div>
+                <div
+                  id="parallelWire2"
+                  style="
+                    position: absolute;
+                    width: 40px;
+                    height: 50px;
+                    left: 120px;
+                    top: 80px;
+                  "
+                  onmouseover="changeCursor()"
+                  onmouseout="defaultCursor()"
+                  onclick="showParellelWire(this)"
+                >
+                  <img
+                    id="drag4"
+                    src="../PHY/EMM/MeterBridge-Single-And-Series/images/parallelWire.png"
+                    style="position: absolute"
+                  />
+                </div>
+                <div
+                  id="parallel1"
+                  style="
+                    position: absolute;
+                    width: 40px;
+                    height: 50px;
+                    left: 30px;
+                    top: 80px;
+                    visibility: hidden;
+                  "
+                  onmouseover="changeCursor()"
+                  onmouseout="defaultCursor()"
+                >
+                  <img
+                    src="../PHY/EMM/MeterBridge-Single-And-Series/images/parallel.png"
+                  />
+                </div>
+                <div
+                  id="parallel2"
+                  style="
+                    position: absolute;
+                    width: 40px;
+                    height: 50px;
+                    left: 120px;
+                    top: 80px;
+                    visibility: hidden;
+                  "
+                  onmouseover="changeCursor()"
+                  onmouseout="defaultCursor()"
+                >
+                  <img
+                    src="../PHY/EMM/MeterBridge-Single-And-Series/images/parallel.png"
+                  />
+                </div>
+              </div>
+              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+              <p align="center">
+                <input
+                  type="button"
+                  class="subButton"
+                  id="exp"
+                  name="exp"
+                  value="পরীক্ষণ শুরু করুন"
+                  disabled="disabled"
+                  onclick="startExp()"
+                />
+              </p>
+              <br /><br />
+              <p align="center">
+                <input
+                  type="button"
+                  class="subButton"
+                  id="key"
+                  name="key"
+                  value="চাবি ঢোকান"
+                  disabled="disabled"
+                  onclick="keyFn()"
+                />
+              </p>
+              <br /><br />
+              <p class="varTitle" id="input1"></p>
+              <!--  <span id="input1">0.01</span>
 -->
-                        <!--<script>
+              <!--<script>
 window.dhx_globalImgPath = "imgs/";
 //onkeydown="validate(this.value)
 var slider1 = new dhtmlxSlider(null, 150);
@@ -275,54 +568,67 @@ slider1.disabled="disabled";
 slider1.attachEvent("onChange",jockeyPosition)
 </script>-->
 
-                        <input type="range" class="rangeSlider jock" min="1" max="100" id="jock" name="jock" value="1"
-                            oninput="jockeyPosition(this.value)" step="0.1" disabled="disabled" />
-                        <div class="rangeVals">
-                            <span class="minrange">1</span><span class="maxrange">100</span>
-                            <div class="clear"></div><br />
-                            <p align="center"><input type="button" class="subButton" id="reset" name="reset"
-                                    value="পুনরায় শুরু করুন" onclick="window.location.reload()" /></p>
-                        </div>
-                    </div>
+              <input
+                type="range"
+                class="rangeSlider jock"
+                min="1"
+                max="100"
+                id="jock"
+                name="jock"
+                value="1"
+                oninput="jockeyPosition(this.value)"
+                step="0.1"
+                disabled="disabled"
+              />
+              <div class="rangeVals">
+                <span class="minrange">1</span><span class="maxrange">100</span>
+                <div class="clear"></div>
+                <br />
+                <p align="center">
+                  <input
+                    type="button"
+                    class="subButton"
+                    id="reset"
+                    name="reset"
+                    value="পুনরায় শুরু করুন"
+                    onclick="window.location.reload()"
+                  />
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
 
-                </li>
-            </ul>
-
-            <script type="text/javascript">
-                var inputs = document.getElementsByTagName('input');
-                for (var i = 0; i < inputs.length; i++) {
-
-                    if (inputs[i].type == 'range') {
-                        inputs[i].addEventListener('click', function () {
-                            this.focus();
-                        });
-                    }
-                }
-            </script>
-
-        </div>
         <script type="text/javascript">
-            var expTitle = "Equivalent Resistance of Resistors(Series)";
-            document.getElementById("expName").innerHTML = expTitle;
-            //get test variable from the url.
-            function getTypeOfTest(name) {
-                name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-                var regexS = "[\\?&]" + name + "=([^&#]*)";
-                var regex = new RegExp(regexS);
-                var results = regex.exec(window.location.href);
-                if (results != null)
-                    return results[1];
-                else
-                    return false;
+          var inputs = document.getElementsByTagName("input");
+          for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].type == "range") {
+              inputs[i].addEventListener("click", function () {
+                this.focus();
+              });
             }
-
-            var testType = getTypeOfTest("class");
-            if (!testType) {
-                testType = "10";
-            }
-
+          }
         </script>
-        <!-- <footer id="tempFooter">
+      </div>
+      <script type="text/javascript">
+        var expTitle = "Equivalent Resistance of Resistors(Series)";
+        document.getElementById("expName").innerHTML = expTitle;
+        //get test variable from the url.
+        function getTypeOfTest(name) {
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regexS = "[\\?&]" + name + "=([^&#]*)";
+          var regex = new RegExp(regexS);
+          var results = regex.exec(window.location.href);
+          if (results != null) return results[1];
+          else return false;
+        }
+
+        var testType = getTypeOfTest("class");
+        if (!testType) {
+          testType = "10";
+        }
+      </script>
+      <!-- <footer id="tempFooter">
             <div class="g396 footer">
                 <p class="labName">Developed by Amrita University Under research grant from <br />Department Of
                     Electronics & Information Technology</p>
@@ -332,8 +638,6 @@ slider1.attachEvent("onChange",jockeyPosition)
             </div>
             <div class="clear"></div>
         </footer>  -->
-
     </div>
-</body>
-
+  </body>
 </html>

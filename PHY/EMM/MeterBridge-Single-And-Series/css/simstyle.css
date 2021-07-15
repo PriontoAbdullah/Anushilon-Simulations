@@ -1,316 +1,316 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
 
 #mainCanvas {
-	height: 440px;
-	width: 570px;
+  height: 440px;
+  width: 570px;
 }
 
 #mBridge {
-	position: absolute;
-	width: 490px;
-	height: 50px;
-	top: 215px;
-	left: 35px;
+  position: absolute;
+  width: 490px;
+  height: 50px;
+  top: 215px;
+  left: 35px;
 }
 
 #galvanometer {
-	position: absolute;
-	width: 81px;
-	height: 71px;
-	top: 300px;
-	left: 400px;
+  position: absolute;
+  width: 81px;
+  height: 71px;
+  top: 300px;
+  left: 400px;
 }
 #scale {
-	position: absolute;
-	width: 555px;
-	height: 77px;
-	top: 3px;
-	left: 5px;
+  position: absolute;
+  width: 555px;
+  height: 77px;
+  top: 3px;
+  left: 5px;
 }
 #scaleImg {
-	position: absolute;
-	width: 555px;
-	height: 44px;
-	top: 4px;
-	left: 8px;
-	overflow: hidden;
+  position: absolute;
+  width: 555px;
+  height: 44px;
+  top: 4px;
+  left: 8px;
+  overflow: hidden;
 }
 #scalezoom {
-	position: absolute;
-	top: -40px;
-	left: -32px;
+  position: absolute;
+  top: -40px;
+  left: -32px;
 }
 #zoomgalvanometer {
-	position: absolute;
-	width: 250px;
-	height: 160px;
-	top: 270px;
-	left: 40px;
-	z-index: 9999;
+  position: absolute;
+  width: 250px;
+  height: 160px;
+  top: 270px;
+  left: 40px;
+  z-index: 9999;
 }
 #zoomBG {
-	position: absolute;
-	width: 250px;
-	height: 170px;
-	top: 260px;
-	left: 50px;
-	z-index: 99;
+  position: absolute;
+  width: 250px;
+  height: 170px;
+  top: 260px;
+  left: 50px;
+  z-index: 99;
 }
 #line1 {
-	position: absolute;
-	top: 259px;
-	left: 300px;
-	z-index: 999;
+  position: absolute;
+  top: 259px;
+  left: 300px;
+  z-index: 999;
 }
 #line2 {
-	position: absolute;
-	top: 330px;
-	left: 301px;
-	z-index: 999;
+  position: absolute;
+  top: 330px;
+  left: 301px;
+  z-index: 999;
 }
 #tooltip {
-	position: absolute;
-	z-index: 99999999;
-	top: 185px;
-	left: 70px;
-	width: 48px;
-	height: 29px;
-	font-size: 12px;
-	font-family: 'Hind Siliguri', sans-serif;
-	font-weight: 500;
-	text-align: center;
-	padding: 5px 5px 5px 0px;
+  position: absolute;
+  z-index: 99999999;
+  top: 185px;
+  left: 70px;
+  width: 48px;
+  height: 29px;
+  font-size: 12px;
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px 5px 5px 0px;
 }
 #tooltip1 {
-	position: absolute;
-	z-index: 99999999;
-	top: 85px;
-	left: 140px;
-	width: 158px;
-	height: 52px;
-	font-family: 'Hind Siliguri', sans-serif;
-	font-weight: 600;
-	letter-spacing: 0.5px;
-	font-size: 12px;
-	text-align: center;
-	padding: 10px 2px;
+  position: absolute;
+  z-index: 99999999;
+  top: 85px;
+  left: 140px;
+  width: 158px;
+  height: 52px;
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 2px;
 }
 #tooltip2 {
-	position: absolute;
-	z-index: 99999999;
-	top: 120px;
-	left: 190px;
-	width: 48px;
-	height: 29px;
-	font-size: 12px;
-	font-family: 'Hind Siliguri', sans-serif;
-	font-weight: 500;
-	text-align: center;
-	padding: 5px 5px 5px 0px;
+  position: absolute;
+  z-index: 99999999;
+  top: 120px;
+  left: 190px;
+  width: 48px;
+  height: 29px;
+  font-size: 12px;
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px 5px 5px 0px;
 }
 #wireGal {
-	position: absolute;
-	top: 264px;
-	left: 305px;
+  position: absolute;
+  top: 264px;
+  left: 305px;
 }
 #wireJockey {
-	position: absolute;
-	top: 223px;
-	left: 85px;
+  position: absolute;
+  top: 223px;
+  left: 85px;
 }
 #wireJockeyImg2 {
-	position: absolute;
+  position: absolute;
 }
 #wire {
-	position: absolute;
-	top: 286px;
-	left: 55px;
-	height: 10px;
-	width: 130px;
-	visibility: hidden;
+  position: absolute;
+  top: 286px;
+  left: 55px;
+  height: 10px;
+  width: 130px;
+  visibility: hidden;
 }
 #wireImg {
-	position: absolute;
+  position: absolute;
 }
 #jockey {
-	position: absolute;
-	top: 65px;
-	left: 60px;
+  position: absolute;
+  top: 65px;
+  left: 60px;
 }
 #battery {
-	position: absolute;
-	top: 120px;
-	left: 238px;
-	width: 90px;
-	height: 65px;
-	z-index: 999;
+  position: absolute;
+  top: 120px;
+  left: 238px;
+  width: 90px;
+  height: 65px;
+  z-index: 999;
 }
 #resistor {
-	position: absolute;
-	top: 150px;
-	left: 170px;
-	width: 50px;
-	height: 50px;
-	z-index: 999;
+  position: absolute;
+  top: 150px;
+  left: 170px;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
 }
 #rshadow {
-	position: absolute;
-	top: 170px;
-	left: 155px;
+  position: absolute;
+  top: 170px;
+  left: 155px;
 }
 #bshadow {
-	position: absolute;
-	top: 155px;
-	left: 230px;
+  position: absolute;
+  top: 155px;
+  left: 230px;
 }
 #gshadow {
-	position: absolute;
-	top: 340px;
-	left: 390px;
+  position: absolute;
+  top: 340px;
+  left: 390px;
 }
 #wireBattery {
-	position: absolute;
-	top: 115px;
-	left: 84px;
-	width: 400px;
-	height: 115px;
-	z-index: 9;
+  position: absolute;
+  top: 115px;
+  left: 84px;
+  width: 400px;
+  height: 115px;
+  z-index: 9;
 }
 #wireRes {
-	position: absolute;
-	top: 160px;
-	left: 177px;
-	width: 50px;
-	height: 67px;
-	z-index: 999;
+  position: absolute;
+  top: 160px;
+  left: 177px;
+  width: 50px;
+  height: 67px;
+  z-index: 999;
 }
 #connector {
-	position: absolute;
-	top: 170px;
-	left: 415px;
+  position: absolute;
+  top: 170px;
+  left: 415px;
 }
 #box {
-	position: absolute;
-	top: 20px;
-	left: 160px;
-	z-index: 99999999;
+  position: absolute;
+  top: 20px;
+  left: 160px;
+  z-index: 99999999;
 }
 #close {
-	position: absolute;
-	top: 40px;
-	left: 270px;
-	z-index: 99999999;
+  position: absolute;
+  top: 40px;
+  left: 270px;
+  z-index: 99999999;
 }
 #resValue {
-	position: absolute;
-	top: 30px;
-	left: 190px;
-	z-index: 99999999;
+  position: absolute;
+  top: 30px;
+  left: 190px;
+  z-index: 99999999;
 }
 #wireJockey2 {
-	position: absolute;
-	top: 223px;
-	left: 50px;
+  position: absolute;
+  top: 223px;
+  left: 50px;
 }
 #wireImg3 {
-	position: absolute;
-	top: 190px;
-	left: 347px;
+  position: absolute;
+  top: 190px;
+  left: 347px;
 }
 #needleRotate1 {
-	position: absolute;
-	width: 4px;
-	top: 370px;
-	left: 170px;
-	z-index: 99999;
-	transform: rotate(0deg);
-	-ms-transform: rotate(0deg); /* Internet Explorer */
-	-moz-transform: rotate(0deg); /* Firefox */
-	-webkit-transform: rotate(0deg); /* Safari and Chrome */
-	-o-transform: rotate(0deg); /* Opera */
-	visibility: hidden;
+  position: absolute;
+  width: 4px;
+  top: 370px;
+  left: 170px;
+  z-index: 99999;
+  transform: rotate(0deg);
+  -ms-transform: rotate(0deg); /* Internet Explorer */
+  -moz-transform: rotate(0deg); /* Firefox */
+  -webkit-transform: rotate(0deg); /* Safari and Chrome */
+  -o-transform: rotate(0deg); /* Opera */
+  visibility: hidden;
 }
 #needleRotate2 {
-	position: absolute;
-	width: 4px;
-	top: 322px;
-	left: 436px;
-	z-index: 99999;
-	transform: rotate(0deg);
-	-ms-transform: rotate(0deg); /* Internet Explorer */
-	-moz-transform: rotate(0deg); /* Firefox */
-	-webkit-transform: rotate(0deg); /* Safari and Chrome */
-	-o-transform: rotate(0deg); /* Opera */
-	visibility: hidden;
+  position: absolute;
+  width: 4px;
+  top: 322px;
+  left: 436px;
+  z-index: 99999;
+  transform: rotate(0deg);
+  -ms-transform: rotate(0deg); /* Internet Explorer */
+  -moz-transform: rotate(0deg); /* Firefox */
+  -webkit-transform: rotate(0deg); /* Safari and Chrome */
+  -o-transform: rotate(0deg); /* Opera */
+  visibility: hidden;
 }
 
 #firstneedleRotate1 {
-	position: absolute;
-	width: 4px;
-	top: 309px;
-	left: 167px;
-	z-index: 99999;
+  position: absolute;
+  width: 4px;
+  top: 309px;
+  left: 167px;
+  z-index: 99999;
 }
 
 #firstneedleRotate2 {
-	position: absolute;
-	top: 309px;
-	left: 430px;
-	z-index: 99999;
+  position: absolute;
+  top: 309px;
+  left: 430px;
+  z-index: 99999;
 }
 #needleRotate3 {
-	position: absolute;
-	width: 4px;
-	top: 320px;
-	left: 145px;
-	z-index: 99999;
-	transform: rotate(0deg);
-	-ms-transform: rotate(0deg); /* Internet Explorer */
-	-moz-transform: rotate(0deg); /* Firefox */
-	-webkit-transform: rotate(0deg); /* Safari and Chrome */
-	-o-transform: rotate(0deg); /* Opera */
-	visibility: hidden;
+  position: absolute;
+  width: 4px;
+  top: 320px;
+  left: 145px;
+  z-index: 99999;
+  transform: rotate(0deg);
+  -ms-transform: rotate(0deg); /* Internet Explorer */
+  -moz-transform: rotate(0deg); /* Firefox */
+  -webkit-transform: rotate(0deg); /* Safari and Chrome */
+  -o-transform: rotate(0deg); /* Opera */
+  visibility: hidden;
 }
 #needleRotate4 {
-	position: absolute;
-	width: 4px;
-	top: 310px;
-	left: 429px;
-	z-index: 99999;
-	transform: rotate(0deg);
-	-ms-transform: rotate(0deg); /* Internet Explorer */
-	-moz-transform: rotate(0deg); /* Firefox */
-	-webkit-transform: rotate(0deg); /* Safari and Chrome */
-	-o-transform: rotate(0deg); /* Opera */
-	visibility: visible;
+  position: absolute;
+  width: 4px;
+  top: 310px;
+  left: 429px;
+  z-index: 99999;
+  transform: rotate(0deg);
+  -ms-transform: rotate(0deg); /* Internet Explorer */
+  -moz-transform: rotate(0deg); /* Firefox */
+  -webkit-transform: rotate(0deg); /* Safari and Chrome */
+  -o-transform: rotate(0deg); /* Opera */
+  visibility: visible;
 }
 
 #wireSeries1 {
-	position: absolute;
-	top: 200px;
-	left: 345px;
-	visibility: hidden;
+  position: absolute;
+  top: 200px;
+  left: 345px;
+  visibility: hidden;
 }
 #wireSeries2 {
-	position: absolute;
-	top: 202px;
-	left: 360px;
-	visibility: hidden;
+  position: absolute;
+  top: 202px;
+  left: 360px;
+  visibility: hidden;
 }
 #round1 {
-	position: absolute;
-	top: 375px;
-	left: 155px;
-	z-index: 99999999;
+  position: absolute;
+  top: 375px;
+  left: 155px;
+  z-index: 99999999;
 }
 #round2 {
-	position: absolute;
-	top: 330px;
-	left: 432px;
-	z-index: 99999999;
+  position: absolute;
+  top: 330px;
+  left: 432px;
+  z-index: 99999999;
 }
 #connector2 {
-	position: absolute;
-	top: 170px;
-	left: 415px;
+  position: absolute;
+  top: 170px;
+  left: 415px;
 }
