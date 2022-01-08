@@ -86,7 +86,7 @@ window.onload = function init() {
         String.fromCharCode(8594) +
         ' K<sub>2</sub>SO<sub>4</sub> + <br> 2MnSO<sub>4</sub> + 18H<sub>2</sub>O+ 10CO<sub>2</sub>',
     ];
-    var burneronoffImg = ['burner_off.png', 'burner_on.png'];
+    var burneronoffImg = ['burner_off.png', 'burette_on.png'];
     var sampleSoln = ['conical_flask_solution.png', 'conicalFlskWaterPink.png'];
     var dragObj = ['testtube', 'conicalflaskArea'];
     var displayArray = ['block', 'none'];
