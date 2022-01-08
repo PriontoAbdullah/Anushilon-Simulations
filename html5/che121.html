@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Enable IE9 Standards mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="template/olab_ot/css/font.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="template/olab_ot/css/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="template/olab_ot/css/grid.css"
+    />
+    <link
+      href="template/olab_ot/css/mainstyle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="js/nanoscroller/nanoscroller.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="js/nanoscroller/overthrow.min.js"></script>
+    <script src="js/jquery/1.7/jquery-1.7.1.js"></script>
+    <script src="js/nanoscroller/jquery.nanoscroller.js"></script>
+    <script type="text/javascript" src="js/nanoscroller/touchready.js"></script>
+    <script type="text/javascript" src="js/nanoscroller/main.js"></script>
+    <!--[if IE]><script src="js/excanvas.js"></script><![endif]-->
+    <link
+      href="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/css/simstyle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="./js/trip/trip.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript">
+      var simPath =
+        '../CHE/INC/Determination_of_concentration_of_KMnO4_solution/';
+    </script>
+    <script
+      src="js/jquery/ui/1.8.21/jquery-ui.min.js"
+      language="javascript"
+    ></script>
+    <script type="text/javascript" src="js/touchconvert.js"></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="./js/jquery.i18n.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/js/jQueryRotate.2.2.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="js/jquery.qtip-1.0.0.min.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/js/help.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="./js/trip/trip.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/js/simcontrols.js"
+    ></script>
+    <script language="javascript">
+      var language_script = 'en-IN';
+      var language = language_script.toString();
+      language = language.slice(0, 2);
+      var gt = $;
+      gt.gettext.setLocale(language);
+    </script>
+    <script
+      type="text/javascript"
+      src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/./locale/en-IN/LC_MESSAGES/language.json"
+    ></script>
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .gradient {
+          filter: none;
+        }
+      </style>
+    <![endif]-->
+    <script src="js/js-webshim/1.9.7/minified/extras/modernizr-custom.js"></script>
+    <script>
+      if (!Modernizr.inputtypes.range) {
+        document.write(
+          '<script type="text/javascript" src="js/js-webshim/1.9.7/minified/polyfiller.js"></' +
+            'script>'
+        );
+        $(document).ready(function () {
+          $.webshims.setOptions('waitReady', false);
+          $.webshims.polyfill('forms-ext');
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <header id="silumatorTemp">
+        <div class="g99 logo"></div>
+        <!-- end .g99 -->
+        <div class="g495 mainTitle">
+          <p id="expName"></p>
+        </div>
+        <!-- end .g495 -->
+        <div class="g198 menuSet"></div>
+        <!-- end .g198 -->
+        <div class="g792 bannerFoot">
+          <ul id="olabmenuBar">
+            <li><a href="#">SAVE</a></li>
+            <li>
+              <a
+                id="olabFullscrBtn"
+                onClick="parent.simFullScreenOlab()"
+                style="cursor: pointer"
+                >FULLSCREEN</a
+              >
+            </li>
+            <li><a href="#">EXIT</a></li>
+          </ul>
+        </div>
+        <!-- end .grid_8 -->
+      </header>
+      <!-- /header -->
+      <div class="g594 canvasHolder">
+        <div id="canvasBox">
+          <div id="mainDiv">
+            <!--Loading Background-->
+            <canvas
+              id="bgCanvas"
+              style="
+                background-image: url(../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/BG.gif);
+              "
+            ></canvas>
+            <!--Loading Zoom area-->
+            <div id="buretteZoom">
+              <img
+                id="buretteZoomWater"
+                src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/burette_solution_zoom.png"
+              />
+              <img
+                id="buretteZoomScale"
+                src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/burette_zoom.png"
+              />
+            </div>
+            <img
+              id="zoomArea"
+              src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/zoom_area.png"
+            />
+            <!--Loading testube animation-->
+            <div id="animLoad"></div>
+
+            <div id="label_board">
+              <img
+                src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/label_board.png"
+              />
+              <p id="label_txt">পাতলা H<sub>2</sub>SO<sub>4</sub></p>
+            </div>
+
+            <!--Loading conical flask and solution -->
+            <div id="violetDiv">
+              <img
+                id="vImg"
+                src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/violetDisolve.png"
+              />
+            </div>
+            <div id="conicalflaskArea">
+              <div id="solutionBgDiv">
+                <img
+                  id="solnBG"
+                  src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/solution_bg.png"
+                />
+              </div>
+              <div id="solutionDiv">
+                <img
+                  id="soln"
+                  src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/conical_flask_solution.png"
+                />
+              </div>
+              <div id="solutionBgDiv2">
+                <img
+                  id="solnBG2"
+                  src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/solution_bg.png"
+                />
+              </div>
+              <div id="solutionDiv2">
+                <img
+                  id="soln2"
+                  src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/conical_flask_solution.png"
+                />
+              </div>
+              <img
+                src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/conical_flask.png"
+                id="flask"
+              />
+              <img
+                id="drops"
+                src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/drop.png"
+              />
+            </div>
+            <!--Loading burette and solution -->
+            <div id="buretteWaterDiv">
+              <img
+                id="buretteWater"
+                src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/burette_solution_top.png"
+              />
+            </div>
+            <img
+              id="buretteWaterBottom"
+              src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/burette_solution_bottom.png"
+            />
+            <img
+              class="buretteOffOn"
+              id="buretteOff"
+              src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/burette_off.png"
+            />
+            <img
+              class="buretteOffOn"
+              id="buretteOn"
+              src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/burette_on.png"
+            />
+            <div id="onoffCommon"></div>
+            <img
+              id="burette"
+              src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/burette_stand.png"
+            />
+            <div id="buretteDiv"></div>
+            <div id="stand"></div>
+            <!--Loading flame and burner -->
+            <div id="flame">
+              <img
+                src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/flame1.png"
+                class="flame1"
+              />
+              <img
+                src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/flame2.png"
+                class="flame2"
+              />
+              <img
+                src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/flame3.png"
+                class="flame3"
+              />
+              <img
+                src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/flame4.png"
+                class="flame4"
+              />
+            </div>
+
+            <img
+              id="burner"
+              src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/burner.png"
+            />
+            <img
+              id="burner_btn"
+              src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/burner_off.png"
+            />
+            <div id="burnerOnOff"></div>
+            <!--Loading label and tooltips -->
+            <p class="varTitleCanvas" id="temperature">
+              <span id="temperatureLabel"></span><span id="tempValue"></span>
+            </p>
+            <p class="varTitleCanvas" id="volTitrant"></p>
+
+            <div id="solnPourStart"></div>
+            <div id="solnPour"></div>
+            <!--Loading testube stand and testtube -->
+            <div id="testtube">
+              <img
+                src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/testtube_with_solution.png"
+                id="testtubeImg"
+              />
+            </div>
+            <img
+              src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/testtube_stand.png"
+              id="testtubeStand"
+            />
+            <div id="popup">
+              <img
+                id="tooltipImg"
+                src="../CHE/INC/Determination_of_concentration_of_KMnO4_solution/images/popup.png"
+              />
+              <p id="tooltp"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="g198 controlHolder">
+        <div class="nano has-scrollbar">
+          <ul
+            style="right: -17px"
+            tabindex="0"
+            class="overthrow content description"
+          >
+            <li>
+              <div class="varBox">
+                <!--Loading combo boxes and sliders-->
+                <p class="varTitle"><span id="titrateText"></span></p>
+                <select class="dropBox" name="titrate" id="titrate"></select>
+
+                <br /><br />
+                <p class="varTitle">
+                  <span id="speedText"></span><span id="speedchg">0.1</span>
+                </p>
+                <input
+                  type="range"
+                  class="rangeSlider speed"
+                  min="0.1"
+                  max="1"
+                  id="speed"
+                  name="speed"
+                  value="0.1"
+                  step="0.1"
+                />
+                <div class="rangeVals">
+                  <span class="minrange">0.1</span
+                  ><span class="maxrange">1</span>
+                  <div class="clear"></div>
+                </div>
+                <br />
+
+                <p class="varTitle">
+                  <span id="molarityText"></span><span id="molaritychg">1</span
+                  ><span>M</span>
+                </p>
+                <input
+                  type="range"
+                  class="rangeSlider molarity"
+                  min="1"
+                  max="10"
+                  id="molarity"
+                  name="molarity"
+                  value="1"
+                  step="1"
+                />
+                <div class="rangeVals">
+                  <span class="minrange">1</span
+                  ><span class="maxrange">10</span>
+                  <div class="clear"></div>
+                </div>
+                <br />
+                <p class="varTitle">
+                  <span id="volumeText"></span> <span id="volumechg">10</span
+                  ><span>ml </span>
+                </p>
+                <input
+                  type="range"
+                  class="rangeSlider volume"
+                  min="10"
+                  max="20"
+                  id="volume"
+                  name="volume"
+                  value="10"
+                  step="1"
+                />
+                <div class="rangeVals">
+                  <span class="minrange">10</span
+                  ><span class="maxrange">20</span>
+                  <div class="clear"></div>
+                </div>
+                <br />
+                <p align="center">
+                  <input
+                    type="button"
+                    class="subButton"
+                    name="start"
+                    id="start"
+                    disabled="disabled"
+                  />
+                </p>
+                <br /><br />
+
+                <p class="varTitle">
+                  <input
+                    type="checkbox"
+                    id="displayResult"
+                    disabled="disabled"
+                  /><span id="showChecked"></span>
+                </p>
+                <br />
+                <!--Loading result options-->
+                <p class="varResult">
+                  <u><span id="resultText"></span></u>
+                </p>
+                <p class="varTitleReaction" id="reaction"></p>
+                <br />
+
+                <p class="varTitle"><span id="titrateMoles"></span></p>
+                <p class="varTitle">
+                  <span class="varSpace" style="float: left">=</span
+                  ><input
+                    type="text"
+                    class="wideTxtAreaclass"
+                    id="molesTitrate"
+                    name="molesTitrate"
+                    disabled="disabled"
+                    style="float: left"
+                  /><img id="correct2" />
+                </p>
+                <p class="varTitle"><span id="titrantMoles"></span></p>
+                <p class="varTitle">
+                  <span class="varSpace" style="float: left">=</span
+                  ><input
+                    type="text"
+                    class="wideTxtAreaclass"
+                    id="molesTitrant"
+                    name="molesTitrant"
+                    disabled="disabled"
+                    style="float: left"
+                  /><img id="correct1" />
+                </p>
+
+                <p class="varTitle" id="titrntMolarity"></p>
+                <p class="varTitle">
+                  <span class="varSpace">=</span
+                  ><span class="varTitle" id="molLabel"></span>
+                </p>
+                <p class="varTitle">
+                  <span class="varSpace" style="float: left">=</span
+                  ><input
+                    type="text"
+                    class="wideTxtAreaclass"
+                    id="molTitrant"
+                    name="molTitrant"
+                    disabled="disabled"
+                    style="float: left"
+                  /><span id="molUnit" style="float: left"></span
+                  ><img id="correct3" />
+                </p>
+
+                <p class="varTitle"><span id="molarMassTitrant"></span></p>
+                <p class="varTitle">
+                  <span class="varSpace">=</span><span id="molarMassval"></span>
+                </p>
+                <br />
+                <p class="varTitle"><span id="strngthTitrant"></span></p>
+                <p class="varTitle">
+                  <span class="varSpace" style="float: left">=</span
+                  ><input
+                    type="text"
+                    class="wideTxtAreaclass"
+                    id="strengthval"
+                    name="strengthval"
+                    disabled="disabled"
+                  /><span id="strngthSym"></span>
+                </p>
+                <br />
+                <p class="varResult2" id="result">
+                  <img id="correct" /><span id="resTxt"></span>
+                </p>
+                <br /><br />
+                <!--Loading reset buttons-->
+
+                <p align="center">
+                  <input
+                    type="button"
+                    class="subButton"
+                    name="reset"
+                    id="reset"
+                  />
+                </p>
+                <br />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <script type="text/javascript">
+        var expTitle =
+          'Determination of Concentration/Molarity of KMnO<sub>4</sub> solution';
+        document.getElementById('expName').style.size = '11px';
+        document.getElementById('expName').innerHTML = expTitle;
+      </script>
+      <!-- <footer id="tempFooter">
+        <div class="g396 footer">
+          <p class="labName">
+            Developed by Amrita University Under research grant from
+            <br />Department Of Electronics & Information Technology
+          </p>
+        </div>
+       
+        <div class="g396 footer">
+          <p class="copyName"></p>
+        </div>
+        <div class="clear"></div>
+      </footer> -->
+      <!-- /footer -->
+    </div>
+  </body>
+</html>
+<script>
+  function simFullScreenOlab() {
+    var $ = function (selector, context) {
+      return (context || document).querySelector(selector);
+    };
+    var iframe = $('iframe'),
+      domPrefixes = 'Webkit Moz O ms Khtml'.split(' ');
+
+    var fullscreen = function (elem) {
+      var prefix;
+
+      // Mozilla and webkit intialise fullscreen slightly differently
+      for (var i = -1, len = domPrefixes.length; ++i < len; ) {
+        prefix = domPrefixes[i].toLowerCase();
+        if (elem[prefix + 'EnterFullScreen']) {
+          // Webkit uses EnterFullScreen for video
+          return prefix + 'EnterFullScreen';
+          break;
+        } else if (elem[prefix + 'RequestFullScreen']) {
+          // Mozilla uses RequestFullScreen for all elements and webkit uses it for non video elements
+          return prefix + 'RequestFullScreen';
+          break;
+        }
+      }
+      return false;
+    };
+    // Webkit uses "requestFullScreen" for non video elements
+    var fullscreenother = fullscreen(document.createElement('iframe'));
+    if (!fullscreen) {
+      alert(
+        "Fullscreen won't work, please make sure you're using a browser that supports it and you have enabled the feature"
+      );
+      return;
+    }
+    iframe[fullscreenother]();
+    this, this.document;
+  }
+</script>

@@ -1,0 +1,411 @@
+.wideTxtAreaclass {
+  margin: 3px 0px 3px 5px;
+  color: #777777;
+  font-size: 11px;
+  width: 60px;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #777777;
+  font-size: 12px;
+  resize: none;
+  padding: 5px 6px;
+}
+.varTitleReaction {
+  padding: 5px 0px 0px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #626262;
+  text-align: left;
+}
+.varTitleCanvas {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  text-align: left;
+  z-index: 999;
+}
+.varResult {
+  padding: 5px 0px 10px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgb(51, 51, 51);
+  text-align: left;
+}
+.varSpace {
+  margin: 3px 0px 3px 20px;
+  padding-top: 5px;
+}
+.varResult2 {
+  padding: 5px 0px 2px 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+}
+#expName {
+  width: 750px;
+  height: 28px;
+  padding-top: 6px;
+  display: none !important ;
+}
+#mainDiv {
+  overflow: hidden;
+  position: absolute;
+  height: 336px;
+  width: 568px;
+  background: #fff;
+  opacity: 0.99;
+}
+#bgCanvas {
+  position: absolute;
+  top: -3px;
+  left: 0px;
+  height: 345px;
+  width: 570px;
+}
+#animLoad {
+  position: absolute;
+  height: 185px;
+  width: 200px;
+  top: 140px;
+  left: 53px;
+  display: none;
+}
+#testtube {
+  position: absolute;
+  top: 220px;
+  left: 75px;
+  cursor: pointer;
+  width: 50px;
+  height: 100px;
+}
+#testtubeImg {
+  position: absolute;
+  top: 32px;
+  left: 19px;
+}
+#testtubeStand {
+  position: absolute;
+  top: 275px;
+  left: 60px;
+}
+#label_board {
+  position: absolute;
+  top: 306px;
+  left: 5px;
+  z-index: 9999;
+}
+
+#label_txt {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  width: 86px;
+  height: 18px;
+  top: 0px;
+  z-index: 9999;
+}
+#buretteDiv {
+  position: absolute;
+  top: 12px;
+  left: 293px;
+  width: 17px;
+  height: 210px;
+}
+#burette {
+  position: absolute;
+  top: -82px;
+  left: 235px;
+}
+#buretteWater {
+  position: absolute;
+  top: 0px;
+}
+#buretteWaterDiv {
+  position: absolute;
+  top: 68px;
+  left: 294px;
+  width: 15px;
+  height: 112px;
+  overflow: hidden;
+}
+#buretteWaterBottom {
+  position: absolute;
+  top: 180px;
+  left: 294px;
+}
+#zoomArea {
+  position: absolute;
+  top: 10px;
+  left: 116px;
+}
+#buretteZoom {
+  position: relative;
+  top: 13px;
+  left: 120px;
+  width: 100px;
+  height: 183px;
+  overflow: hidden;
+}
+#buretteZoomWater {
+  position: absolute;
+  left: 27px;
+  top: 43px;
+}
+#buretteZoomScale {
+  position: absolute;
+  top: -150px;
+  left: 4px;
+}
+#conicalflaskArea {
+  position: absolute;
+  width: 60px;
+  height: 75px;
+  top: 243px;
+  left: 160px;
+}
+#violetDiv {
+  position: absolute;
+  z-index: 99;
+  width: 23px;
+  height: 11px;
+  left: 290px;
+  top: 295px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+#soln {
+  position: absolute;
+  z-index: 999;
+  top: -65px;
+  left: 5px;
+}
+#solutionDiv {
+  position: absolute;
+  width: 65px;
+  height: 7px;
+  top: 69px;
+  left: -5px;
+  background: #856907;
+  opacity: 0.99;
+  overflow: hidden;
+  visibility: hidden;
+}
+#solnBG {
+  position: absolute;
+  z-index: 999;
+  top: -63px;
+  left: 5px;
+}
+#solutionBgDiv {
+  position: absolute;
+  width: 62px;
+  height: 1px;
+  top: 68px;
+  left: -5px;
+  background: #856907;
+  opacity: 0.99;
+  overflow: hidden;
+  visibility: hidden;
+}
+#soln2 {
+  position: absolute;
+  z-index: 999;
+  top: -65px;
+  left: 5px;
+}
+#solutionDiv2 {
+  position: absolute;
+  width: 65px;
+  height: 7px;
+  top: 69px;
+  left: -5px;
+  overflow: hidden;
+}
+#solnBG2 {
+  position: absolute;
+  z-index: 999;
+  top: -63px;
+  left: 5px;
+}
+#solutionBgDiv2 {
+  position: absolute;
+  width: 62px;
+  height: 1px;
+  top: 68px;
+  left: -5px;
+  overflow: hidden;
+}
+#flask {
+  position: absolute;
+  z-index: 999;
+}
+#onoffCommon {
+  position: absolute;
+  top: 207px;
+  left: 278px;
+  width: 34px;
+  height: 18px;
+  z-index: 9999;
+  cursor: pointer;
+  display: none;
+}
+#buretteOff {
+  position: absolute;
+  top: 216px;
+  left: 288px;
+}
+#buretteOn {
+  position: absolute;
+  top: 210px;
+  left: 288px;
+  display: none;
+}
+#stand {
+  position: absolute;
+  top: 0px;
+  left: 335px;
+  cursor: pointer;
+  width: 15px;
+  height: 320px;
+  z-index: 10;
+}
+#temperature {
+  position: absolute;
+  left: 400px;
+  top: 120px;
+  display: none;
+}
+#burner {
+  position: absolute;
+  left: 400px;
+  top: 230px;
+}
+#burner_btn {
+  position: absolute;
+  left: 468px;
+  top: 292px;
+  cursor: pointer;
+}
+#flame {
+  position: absolute;
+  left: 452px;
+  top: 232px;
+  display: none;
+}
+.flame1 {
+  position: absolute;
+}
+.flame2 {
+  position: absolute;
+  display: none;
+}
+.flame3 {
+  position: absolute;
+  display: none;
+}
+.flame4 {
+  position: absolute;
+  display: none;
+}
+#burnerOnOff {
+  position: absolute;
+  left: 458px;
+  top: 286px;
+  width: 25px;
+  height: 17px;
+  z-index: 999;
+  display: none;
+  cursor: pointer;
+}
+#result {
+  display: none;
+}
+#drops {
+  position: absolute;
+  left: 27px;
+  top: 0px;
+  display: none;
+}
+#correct1,
+#correct2 {
+  display: none;
+  width: 15px;
+  height: 15px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+#correct3 {
+  display: none;
+  width: 15px;
+  height: 15px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+#molUnit {
+  padding-top: 10px;
+}
+#volTitrant {
+  position: absolute;
+  top: 203px;
+  left: 154px;
+  display: none;
+}
+#popup {
+  position: absolute;
+  top: 72px;
+  left: 312px;
+  width: 245px;
+  height: 132px;
+  display: none;
+  z-index: 99999;
+}
+#tooltipImg {
+  position: absolute;
+  width: 245px;
+  height: 132px;
+  z-index: 999999;
+}
+#tooltp {
+  position: absolute;
+  left: 105px;
+  top: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 300;
+  color: #593e1a;
+  z-index: 999999;
+  width: 135px;
+  height: 48px;
+}
+#resultPart {
+  display: none;
+}
+#solnPour {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 230px;
+  left: 189px;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-top: 90px solid #ccc;
+  display: none;
+}
+#solnPourStart {
+  position: absolute;
+  display: none;
+  width: 57px;
+  height: 3px;
+  top: 227px;
+  left: 132px;
+  background-color: #ccc;
+  -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}

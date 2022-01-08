@@ -40,7 +40,7 @@
       src="./js/jquery.i18n.js"
     ></script>
     <script language="javascript">
-      var language_script = "en-IN";
+      var language_script = 'en-IN';
       var language = language_script.toString();
       language = language.slice(0, 2);
       var gt = $;
@@ -63,11 +63,11 @@
       if (!Modernizr.inputtypes.range) {
         document.write(
           '<script type="text/javascript" src="js/js-webshim/1.9.7/minified/polyfiller.js"></' +
-            "script>"
+            'script>'
         );
         $(document).ready(function () {
-          $.webshims.setOptions("waitReady", false);
-          $.webshims.polyfill("forms-ext");
+          $.webshims.setOptions('waitReady', false);
+          $.webshims.polyfill('forms-ext');
         });
       }
       // Set up the yepnope (Modernizr.load) directives...
@@ -119,7 +119,7 @@
       <div class="g594 canvasHolder">
         <div id="canvasBox">
           <script type="text/javascript" language="javascript">
-            var simPath = "../PHY/EMM/MeterBridge-Single-And-Series/";
+            var simPath = '../PHY/EMM/MeterBridge-Single-And-Series/';
           </script>
           <canvas id="mainCanvas"></canvas>
           <canvas id="mBridge"></canvas>
@@ -600,10 +600,10 @@ slider1.attachEvent("onChange",jockeyPosition)
         </ul>
 
         <script type="text/javascript">
-          var inputs = document.getElementsByTagName("input");
+          var inputs = document.getElementsByTagName('input');
           for (var i = 0; i < inputs.length; i++) {
-            if (inputs[i].type == "range") {
-              inputs[i].addEventListener("click", function () {
+            if (inputs[i].type == 'range') {
+              inputs[i].addEventListener('click', function () {
                 this.focus();
               });
             }
@@ -611,21 +611,21 @@ slider1.attachEvent("onChange",jockeyPosition)
         </script>
       </div>
       <script type="text/javascript">
-        var expTitle = "Equivalent Resistance of Resistors(Series)";
-        document.getElementById("expName").innerHTML = expTitle;
+        var expTitle = 'Equivalent Resistance of Resistors(Series)';
+        document.getElementById('expName').innerHTML = expTitle;
         //get test variable from the url.
         function getTypeOfTest(name) {
-          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-          var regexS = "[\\?&]" + name + "=([^&#]*)";
+          name = name.replace(/[\[]/, '\\\[').replace(/[\]]/, '\\\]');
+          var regexS = '[\\?&]' + name + '=([^&#]*)';
           var regex = new RegExp(regexS);
           var results = regex.exec(window.location.href);
           if (results != null) return results[1];
           else return false;
         }
 
-        var testType = getTypeOfTest("class");
+        var testType = getTypeOfTest('class');
         if (!testType) {
-          testType = "10";
+          testType = '10';
         }
       </script>
       <!-- <footer id="tempFooter">
