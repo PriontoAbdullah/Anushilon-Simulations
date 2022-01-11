@@ -1,0 +1,223 @@
+/* Custom styles for Simulator (Responsive) */
+
+.title {
+  margin-left: 1em;
+  width: 100%;
+}
+
+.navbar-right {
+  margin-right: 1em;
+  margin-top: -3em;
+  float: right;
+}
+
+#expName {
+  font-family: 'Hind Siliguri', sans-serif;
+  color: #fdd8a1;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 10px;
+  height: 24px;
+}
+
+.header .navbar .sidebar-toggle {
+  display: none !important;
+
+  padding-right: 1em;
+  background-color: transparent;
+  padding-top: 0.5em;
+  margin-left: 5px;
+  display: inline-block;
+  background-image: none;
+  border: 1px solid transparent;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+
+.header .navbar .sidebar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.header .navbar .sidebar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+
+.navbar-nav li {
+  display: inline-block;
+  /*  background-image: url(img/menuBgLeft.gif); */
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  margin-left: 5px;
+  padding-left: 2px;
+}
+
+.navbar-nav li a:hover {
+  color: black;
+}
+
+.navbar-nav li a {
+  text-decoration: none;
+  background-image: url(../images/menuBgRight.gif);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  text-decoration: none;
+  padding: 0px 5px 0px 5px;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: left;
+  display: block;
+  height: 17px;
+}
+
+body > .header .navbar {
+  /* height: 50px; */
+  height: 85px;
+  min-height: 85px !important;
+  line-height: 85px !important;
+  margin-bottom: 0;
+  margin-left: 220px;
+}
+
+#bGround {
+  background-image: url(img/main_olab.gif);
+  height: 44em;
+  margin: auto;
+  /* width:800px; */
+  border: solid 1px #555555;
+}
+
+.wrapper {
+  margin-top: -1em;
+}
+
+.leftBox {
+  height: 341px;
+  width: 95%;
+  border: 1px solid black;
+  margin-left: 5px;
+  position: absolute;
+}
+
+.rightBox {
+  width: 95%;
+  height: 341px;
+  border: 1px solid black;
+  position: absolute;
+  background: url(img/BG11.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Toggle Styles */
+
+#wrapper {
+  padding-left: 0;
+  /*  -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; */
+}
+
+#sidebar-wrapper {
+  height: 100%;
+  /* 		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease; */
+}
+
+#page-content-wrapper {
+  padding: 15px;
+  width: 100%;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: relative;
+  width: 70%;
+  margin-right: 1%;
+  /* 		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease; */
+}
+#wrapper.toggled #sidebar-wrapper {
+  width: 25%;
+  height: 0;
+  display: inline-block;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-bottom: 48%;
+  background-color: #edece7;
+  border: 2px solid #ddc7a6;
+  float: none !important;
+  /* 	-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease; */
+}
+
+@media (min-width: 768px) {
+  #wrapper.toggled {
+    padding-left: 0;
+    /* 		 -webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease; */
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    width: 25%;
+    height: 0;
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-bottom: 48%;
+    background-color: #edece7;
+    border: 2px solid #ddc7a6;
+    float: none !important;
+    /* 		 -webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease; */
+  }
+
+  #page-content-wrapper {
+    padding: 20px;
+  }
+
+  #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+    width: 98%;
+    margin: auto;
+  }
+}
+@media (max-width: 768px) {
+  #wrapper.toggled #sidebar-wrapper {
+    /* padding-bottom: 49%; */
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 800px;
+  }
+}
+/* Extra Css while integrating */
+
+.varTitle span {
+  float: left !important;
+}

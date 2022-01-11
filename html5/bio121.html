@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Enable IE9 Standards mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title></title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="template/olab_ot_rt/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="template/olab_ot_rt/css/custom_resp.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="template/olab_ot_rt/css/font.css"
+    />
+    <!--<link rel="stylesheet" type="text/css" media="all" href="template/olab_ot_rt/css/reset.css" />-->
+    <!--<link rel="stylesheet" type="text/css" media="all" href="template/olab_ot_rt/css/grid.css" />-->
+    <link
+      href="template/olab_ot_rt/css/mainstyle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="template/olab_ot_rt/css/newStyle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script src="js/jquery/jquery_v1.12.4.js"></script>
+    <!--<script src="js/jquery/jquery.js"></script>-->
+
+    <!-- jQuery UI 1.12.1 -->
+    <script src="js/jquery/jqueryUI_v1.12.1.js"></script>
+
+    <!--[if IE]><script src="js/excanvas.js"></script><![endif]-->
+    <link
+      href="../BIO/PHL/To_show_experimentally_that_light_is_necessary_for_photosynthesis/css/simstyle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!--<script language="javascript" type="text/javascript" src="../BIO/PHL/To_show_experimentally_that_light_is_necessary_for_photosynthesis/js/jquery.qtip-1.0.0-rc3.min.js"></script>
+-->
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="js/jquery.qtip-1.0.0.min.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="./js/jquery.i18n.js"
+    ></script>
+    <script language="javascript">
+      var language_script = 'en-IN';
+      var language = language_script.toString();
+      language = language.slice(0, 2);
+      var gt = $;
+      gt.gettext.setLocale(language);
+    </script>
+    <script
+      type="text/javascript"
+      src="../BIO/PHL/To_show_experimentally_that_light_is_necessary_for_photosynthesis/./locale/en-IN/language.json"
+    ></script>
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .gradient {
+          filter: none;
+        }
+      </style>
+    <![endif]-->
+    <script src="js/js-webshim/1.9.7/minified/extras/modernizr-custom.js"></script>
+    <script>
+      if (!Modernizr.inputtypes.range) {
+        document.write(
+          '<script type="text/javascript" src="js/js-webshim/1.9.7/minified/polyfiller.js"></' +
+            'script>'
+        );
+        $(document).ready(function () {
+          $.webshims.setOptions('waitReady', false);
+          $.webshims.polyfill('forms-ext');
+        });
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        //toggle sidebar on clicking the hamburger
+        $('#menu-toggle').click(function (e) {
+          e.preventDefault();
+          $('#wrapper').toggleClass('toggled');
+          checkWidth();
+        });
+
+        //show sidebar on clicking the hamburger and hide on clicking outside
+
+        // $('*:not(.menu-toggle)').on('click', function () {
+        // $('#wrapper').removeClass('toggled');
+        // });
+
+        checkWidth();
+
+        //apply transformation on resizing the window viewport
+
+        var windowWidth = $(window).width();
+
+        if (windowWidth != $(window).width()) {
+          checkWidth();
+        }
+
+        $(window).resize(function () {
+          checkWidth();
+          // location.reload();
+          // return;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="wrapper" class="toggled">
+        <header class="header" id="silumatorTemp">
+          <nav class="navbar navbar-static-top" role="navigation">
+            <div class="title" style="display: inline-block">
+              <p id="expName"></p>
+
+              <a
+                href="javascript:"
+                class="navbar-btn sidebar-toggle hidden-md hidden-lg hidden-sm"
+                id="menu-toggle"
+                role="button"
+              >
+               <a href="javascript:" class="navbar-btn sidebar-toggle" id="menu-toggle" role="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+            </div>
+          </nav>
+
+          <!-- <div class="navbar-right">
+            <ul id="olabmenuBar" class="nav navbar-nav">
+              <li>
+                <a href="#">SAVE</a>
+              </li>
+              <li>
+                <a
+                  id="olabFullscrBtn"
+                  onClick="parent.simFullScreenOlab()"
+                  style="cursor: pointer"
+                  >FULLSCREEN</a
+                >
+              </li>
+              <li>
+                <a href="#">EXIT</a>
+              </li>
+            </ul>
+          </div> -->
+        </header>
+        <!-- /header -->
+
+        <div
+          id="sidebar-wrapper"
+          class="controlHolder"
+          style="overflow-y: scroll"
+        >
+          <div class="nano has-scrollbar">
+            <!--<form name="lister"  method="post">
+<ul><div class="varBox">
+<p class="varTitle" ><span id="powerLabel"></span>
+<select  class="dropBox" name="thelist0" id="thelist0" onchange="selectpower_FN(this)" >
+</select>
+</p>
+
+<p class="varTitle"><span id="ditanceLabel"></span>
+<select class="dropBox" name="thelist1" id="thelist1"  onChange="selectdistance_FN(this)">
+</select>
+</p>
+
+<p class="varTitle"><span id="colorLabel"></span>
+<select class="dropBox" name="thelist2" id="thelist2"  onChange="selectcolor_FN(this)">
+</select>
+</p>
+
+<p align="center"><input type="button"  class="subButton" name="Start" value="Start" id="start" onClick="start_FN()"></p>
+<p align="center"><input type="button"  class="subButton" name="Stop" value="Stop" id="stop" onClick="stop_FN()"></p>
+
+
+<!--Loading reset button
+<p align="left"><input type="button" style="margin-left:39px;position:absolute;" class="subButton" name="reset" value="Reset" id="reset" onClick="window.location.reload()" ></p>
+</li></div>
+</ul>-->
+
+            <div class="form-group">
+              <form name="lister" method="post">
+                <ul>
+                  <div class="varBox">
+                    <p class="varTitle">
+                      <span id="powerLabel"></span>
+                      <select
+                        class="form-control"
+                        name="thelist0"
+                        id="thelist0"
+                        onchange="selectpower_FN(this)"
+                      ></select>
+                    </p>
+
+                    <p class="varTitle">
+                      <span id="ditanceLabel"></span>
+                      <select
+                        class="form-control"
+                        name="thelist1"
+                        id="thelist1"
+                        onChange="selectdistance_FN(this)"
+                      ></select>
+                    </p>
+
+                    <p class="varTitle">
+                      <span id="colorLabel"></span>
+                      <select
+                        class="form-control"
+                        name="thelist2"
+                        id="thelist2"
+                        onChange="selectcolor_FN(this)"
+                      ></select>
+                    </p>
+                    <div style="padding: 1em 0em 0 3em">
+                      <input
+                        type="button"
+                        class="btn btn-default btn-block"
+                        name="Start"
+                        value="Start"
+                        id="start"
+                        onClick="start_FN()"
+                      />
+                      <input
+                        type="button"
+                        class="btn btn-default btn-block"
+                        name="Stop"
+                        value="Stop"
+                        id="stop"
+                        onClick="stop_FN()"
+                      />
+
+                      <!--Loading reset button-->
+                      <input
+                        type="button"
+                        class="btn btn-default btn-block"
+                        name="reset"
+                        value="Reset"
+                        id="reset"
+                        onclick="window.location.reload()"
+                      />
+                    </div>
+                  </div>
+                </ul>
+              </form>
+              <div class="pane">
+                <div class="slider"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="page-content-wrapper" class="canvasHolder">
+          <script type="text/javascript" language="javascript">
+            var simPath =
+              '../BIO/PHL/To_show_experimentally_that_light_is_necessary_for_photosynthesis/';
+          </script>
+          <script
+            type="text/javascript"
+            src="../BIO/PHL/To_show_experimentally_that_light_is_necessary_for_photosynthesis/js/simcontrols.js"
+          ></script>
+          <script
+            type="text/javascript"
+            src="../BIO/PHL/To_show_experimentally_that_light_is_necessary_for_photosynthesis/js/responsive.js"
+          ></script>
+
+          <div id="imgCont1">
+            <img
+              id="scaleImg"
+              src="../BIO/PHL/To_show_experimentally_that_light_is_necessary_for_photosynthesis/images/scale.png"
+              style="width: 95%"
+            />
+          </div>
+          <div id="imgCont2">
+            <img
+              id="beakerImg"
+              src="../BIO/PHL/To_show_experimentally_that_light_is_necessary_for_photosynthesis/images/beaker.png"
+              style="width: 75%"
+            />
+          </div>
+          <div id="imgCont3">
+            <img
+              id="clockBody"
+              src="../BIO/PHL/To_show_experimentally_that_light_is_necessary_for_photosynthesis/images/clockBody.png"
+              style="width: 75%"
+            />
+            <img
+              id="needle"
+              src="../BIO/PHL/To_show_experimentally_that_light_is_necessary_for_photosynthesis/images/needle.png"
+              style="width: 5%"
+            />
+          </div>
+          <div id="powerAndLight">
+            <img
+              id="powerSourceImg"
+              src="../BIO/PHL/To_show_experimentally_that_light_is_necessary_for_photosynthesis/images/powerSource.png"
+              style="width: 25%"
+            />
+            <img
+              id="lightrays"
+              src="../BIO/PHL/To_show_experimentally_that_light_is_necessary_for_photosynthesis/images/lightwhite.png"
+              style="width: 300%"
+            />
+          </div>
+
+          <div id="tooltipLabel"></div>
+          <div id="tooltipLabelforClock"></div>
+          <div id="beakerDivCont">
+            <div id="beakerDiv"></div>
+          </div>
+          <div id="testtubeDiv"></div>
+          <div id="funnelDiv"></div>
+          <div id="ElodeaDiv"></div>
+          <div id="solnDiv"></div>
+          <div id="bubbleContainer">
+            <div id="bubblesBeaker">
+              <div class="bubbleBeakr x1"></div>
+              <div class="bubbleBeakr x2"></div>
+              <div class="bubbleBeakr x3"></div>
+              <div class="bubbleBeakr x4"></div>
+              <div class="bubbleBeakr x5"></div>
+              <div class="bubbleBeakr x6"></div>
+              <div class="bubbleBeakr x7"></div>
+              <div class="bubbleBeakr x8"></div>
+              <div class="bubbleBeakr x9"></div>
+            </div>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          var expTitle = 'Importance of Light in Photosynthesis';
+          document.getElementById('expName').style.size = '11px';
+          document.getElementById('expName').innerHTML = expTitle;
+        </script>
+        .
+      </div>
+
+      <footer id="tempFooter" style="margin-top: -4em">
+        <!-- <div
+          style="
+            margin-left: 1em;
+            margin-top: -1.5em;
+            position: absolute;
+            width: 75%;
+          "
+        >
+          <p class="labName">
+            Developed by Amrita University Under research grant from
+            <br />Department Of Electronics & Information Technology
+          </p>
+        </div>
+        <div style="position: relative">
+          <div style="float: right; position: absolute; top: -1em; right: 2em">
+            <img src="template/olab_ot_rt/images/dit_logo.gif" />
+          </div>
+        </div> -->
+      </footer>
+    </div>
+  </body>
+</html>
+<!--<script type="text/javascript" src="js/resp.js"></script>-->
+<script>
+  function simFullScreenOlab() {
+    var $ = function (selector, context) {
+      return (context || document).querySelector(selector);
+    };
+    var iframe = $('iframe'),
+      domPrefixes = 'Webkit Moz O ms Khtml'.split(' ');
+
+    var fullscreen = function (elem) {
+      var prefix;
+
+      // Mozilla and webkit intialise fullscreen slightly differently
+      for (var i = -1, len = domPrefixes.length; ++i < len; ) {
+        prefix = domPrefixes[i].toLowerCase();
+        if (elem[prefix + 'EnterFullScreen']) {
+          // Webkit uses EnterFullScreen for video
+          return prefix + 'EnterFullScreen';
+          break;
+        } else if (elem[prefix + 'RequestFullScreen']) {
+          // Mozilla uses RequestFullScreen for all elements and webkit uses it for non video elements
+          return prefix + 'RequestFullScreen';
+          break;
+        }
+      }
+      return false;
+    };
+    // Webkit uses "requestFullScreen" for non video elements
+    var fullscreenother = fullscreen(document.createElement('iframe'));
+    if (!fullscreen) {
+      alert(
+        "Fullscreen won't work, please make sure you're using a browser that supports it and you have enabled the feature"
+      );
+      return;
+    }
+    iframe[fullscreenother]();
+    this, this.document;
+  }
+</script>

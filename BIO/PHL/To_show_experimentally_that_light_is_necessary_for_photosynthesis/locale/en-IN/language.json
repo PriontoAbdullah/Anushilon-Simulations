@@ -1,0 +1,28 @@
+$.i18n.en = {};
+ jQuery.i18n.en.strings ={
+	"SAVE": "SAVE",
+	"FULL SCREEN": "FULL SCREEN",
+	"EXIT": "EXIT",
+	"Developed by CDAC Mumbai & Amrita University <br> Under research grant from department of IT": "Developed by CDAC Mumbai & Amrita University <br> Under research grant from department of IT",
+	"Importance of Light in Photosynthesis": "Importance of Light in Photosynthesis",
+	"Beaker": "Beaker",
+	"Test tube": "Test tube",
+	"Funnel": "Funnel",
+	"Elodea plant": "Elodea plant",
+	"Baking soda solution": "Baking soda solution",
+	"Power source": "Power source",
+	"Scale": "Scale",
+	"Clear": "Clear",
+	"Red": "Red",
+	"Green": "Green",
+	"Blue": "Blue",
+	"Select the power source:": "Select the power source:",
+	"Select the distance of the power source:": "Select the distance of the power source:",
+	"Select the colour of the filter:": "Select the colour of the filter:",
+	"Start": "Start",
+	"Stop": "Stop",
+	"Reset": "Reset",
+	"Number of bubbles formed: ": "Number of bubbles formed: ",
+	" Min": " Min",
+	" Sec": " Sec"
+}
